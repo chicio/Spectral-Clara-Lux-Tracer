@@ -1,0 +1,87 @@
+<!-- Macbeth color checker scene -->
+<scene type="Spectral">
+	<camera>
+		<viewReferencePoint x="225" y="225" z="700" />
+		<lookAtPoint x="225" y="225" z="100" />
+		<viewPlane d="800" />
+	</camera>
+    <light type="point" spectrum="d65">
+        <origin x="225" y="225" z="700" />
+    </light>
+    <tracerModelType>TracerSpectrumModel</tracerModelType>
+    <shadingModelType>WhittedBRDFShadingModel</shadingModelType>
+    <objects>
+        <object type="polygonalshape">
+            <vertex x="200" y="200" z="300" />
+            <vertex x="250" y="200" z="300" />
+            <vertex x="250" y="250" z="300" />
+            <vertex x="200" y="250" z="300" />
+            <pointOnPlane x="200" y="200" z="300" />
+            <material type="matteLambertian" spectrum="blueFlower" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="140" y="140" z="300" />
+            <vertex x="190" y="140" z="300" />
+            <vertex x="190" y="190" z="300" />
+            <vertex x="140" y="190" z="300" />
+            <pointOnPlane x="140" y="190" z="300" />
+            <material type="matteLambertian" spectrum="green" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="140" y="200" z="300" />
+            <vertex x="190" y="200" z="300" />
+            <vertex x="190" y="250" z="300" />
+            <vertex x="140" y="250" z="300" />
+            <pointOnPlane x="140" y="250" z="300" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="200" y="140" z="300" />
+            <vertex x="250" y="140" z="300" />
+            <vertex x="250" y="190" z="300" />
+            <vertex x="200" y="190" z="300" />
+            <pointOnPlane x="200" y="190" z="300" />
+            <material type="matteLambertian" spectrum="red" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="260" y="140" z="300" />
+            <vertex x="310" y="140" z="300" />
+            <vertex x="310" y="190" z="300" />
+            <vertex x="260" y="190" z="300" />
+            <pointOnPlane x="260" y="190" z="300" />
+            <material type="matteLambertian" spectrum="orange" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="260" y="200" z="300" />
+            <vertex x="310" y="200" z="300" />
+            <vertex x="310" y="250" z="300" />
+            <vertex x="260" y="250" z="300" />
+            <pointOnPlane x="260" y="250" z="300" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="140" y="260" z="300" />
+            <vertex x="190" y="260" z="300" />
+            <vertex x="190" y="310" z="300" />
+            <vertex x="140" y="310" z="300" />
+            <pointOnPlane x="200" y="200" z="300" />
+            <material type="matteLambertian" spectrum="neutral65" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="200" y="260" z="300" />
+            <vertex x="250" y="260" z="300" />
+            <vertex x="250" y="310" z="300" />
+            <vertex x="200" y="310" z="300" />
+            <pointOnPlane x="260" y="190" z="300" />
+            <material type="matteLambertian" spectrum="purple" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="260" y="260" z="300" />
+            <vertex x="310" y="260" z="300" />
+            <vertex x="310" y="310" z="300" />
+            <vertex x="260" y="310" z="300" />
+            <pointOnPlane x="260" y="250" z="300" />
+            <material type="matteLambertian" spectrum="purplishBlue" />
+        </object>
+    </objects>
+</scene>

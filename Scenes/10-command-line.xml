@@ -1,0 +1,26 @@
+<!-- Spectral scene with suzanne obj file -->
+<scene type="Spectral">
+    <camera>
+        <viewReferencePoint x='400' y='400' z='2900' />
+        <lookAtPoint x='512' y='400' z='512' />
+        <viewPlane d='900' />
+    </camera>
+    <light type="area" brightness="50" spectrum="d65">
+        <origin x="512" y="600" z="3500" />
+        <radius r="400" />
+    </light>
+    <!-- <tracerModelType numberOfSamples="100">PathTracerModel</tracerModelType>
+    <shadingModelType>PathTracingBRDFShadingModel</shadingModelType> -->
+    <tracerModelType>TracerSpectrumModel</tracerModelType>
+    <shadingModelType>WhittedBRDFShadingModel</shadingModelType>
+    <objects>
+        <mesh>
+            <aabb>
+                <min x="190" y="150" z="1100" />
+                <max x="825" y="690" z="650" />
+            </aabb>
+            <objFile name="Scenes/OBJs/Suzanne.obj" backFaceCulling="true"/>
+            <material type="matteLambertian" spectrum="red" />
+        </mesh>
+    </objects>
+</scene>

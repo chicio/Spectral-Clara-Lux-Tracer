@@ -1,0 +1,44 @@
+<!-- RGB scene with cube mapping -->
+<scene type="RGB">
+	<camera>
+		<viewReferencePoint x="215" y="250" z="490" />
+		<lookAtPoint x="250" y="250" z="250" />
+		<viewPlane d="240" />
+	</camera>
+    <light type="area">
+        <origin x="0" y="300" z="400" />
+        <radius r="60" />
+        <color r="255" g="255" b="255" />
+    </light>
+    <cubeMappingSkybox>TRUE</cubeMappingSkybox>
+    <tracerModelType>TracerRGBModel</tracerModelType>
+    <shadingModelType>WhittedShadingModel</shadingModelType>
+    <empiricalLighting>Phong</empiricalLighting>
+    <objects>
+        <object type="sphere">
+            <origin x="300" y="300" z="250" />
+            <radius r="90" />
+            <material type="glass" />
+        </object>
+        <object type="sphere">
+            <origin x="230" y="380" z="50" />
+            <radius r="100" />
+            <material type="jade" />
+        </object>
+        <object type="sphere">
+            <origin x="110" y="150" z="150" />
+            <radius r="90" />
+            <material type="bronze" />
+        </object>
+        <object type="sphere">
+            <origin x="340" y="130" z="250" />
+            <radius r="60" />
+            <material type="rubyBumpMapped" scale="4.0" />
+        </object>
+        <object type="sphere">
+            <origin x="250" y="100" z="30" />
+            <radius r="90" />
+            <material type="violet" />
+        </object>
+    </objects>
+</scene>

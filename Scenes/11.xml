@@ -1,0 +1,64 @@
+<!-- Spectral scene with dragon mesh (Whitted) -->
+<scene type="Spectral">
+    <camera>
+        <viewReferencePoint x='512' y='490' z='2900' />
+        <lookAtPoint x='512' y='490' z='512' />
+        <viewPlane d='900' />
+    </camera>
+    <light type="area" spectrum="d65">
+        <origin x="512" y="600" z="2000" />
+        <radius r="70" />
+    </light>
+    <tracerModelType>TracerSpectrumModel</tracerModelType>
+    <shadingModelType>WhittedBRDFShadingModel</shadingModelType>
+    <objects>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="0" z="2210" />
+            <vertex x="1024" y="0" z="2210" />
+            <vertex x="1024" y="0" z="0" />
+            <pointOnPlane x="512" y="0" z="512" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="0" y="0" z="2210" />
+            <pointOnPlane x="0" y="512" z="512" />
+            <material type="matteLambertian" spectrum="red" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="0" z="2210" />
+            <vertex x="1024" y="1024" z="2210" />
+            <vertex x="1024" y="1024" z="0" />
+            <pointOnPlane x="1024" y="512" z="512" />
+            <material type="matteLambertian" spectrum="green" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <pointOnPlane x="512" y="512" z="0" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="2210" />
+            <pointOnPlane x="512" y="1024" z="512" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <mesh>
+            <aabb>
+                <min x="235" y="0" z="930" />
+                <max x="750" y="435" z="600" />
+            </aabb>
+            <objFile name="Dragon" backFaceCulling="true"/>
+            <material type="matteLambertian" spectrum="blueFlower" />
+        </mesh>
+    </objects>
+</scene>

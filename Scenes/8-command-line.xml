@@ -1,0 +1,124 @@
+<!-- Spectral scene with light inside the scene. -->
+<scene type="Spectral">
+    <camera>
+        <viewReferencePoint x="512" y="200" z="1123" />
+        <lookAtPoint x="512" y="200" z="412" />
+        <viewPlane d="480" />
+    </camera>
+    <light type="area" brightness="25" spectrum="d65">
+        <origin x="410" y="35" z="565" />
+        <radius r="35" />
+    </light>
+    <tracerModelType numberOfSamples="50">PathTracerModel</tracerModelType>
+    <shadingModelType>PathTracingBRDFShadingModel</shadingModelType>
+    <objects>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="0" z="2210" />
+            <vertex x="1024" y="0" z="2210" />
+            <vertex x="1024" y="0" z="0" />
+            <pointOnPlane x="512" y="0" z="512" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="0" y="0" z="2210" />
+            <pointOnPlane x="0" y="512" z="512" />
+            <material type="matteLambertian" spectrum="red" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="0" z="2210" />
+            <vertex x="1024" y="1024" z="2210" />
+            <vertex x="1024" y="1024" z="0" />
+            <pointOnPlane x="1024" y="512" z="512" />
+            <material type="matteLambertian" spectrum="green" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <pointOnPlane x="512" y="512" z="0" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="2210" />
+            <pointOnPlane x="512" y="1024" z="512" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="2210" />
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="1024" y="1024" z="2210" />
+            <vertex x="1024" y="0" z="2210" />
+            <pointOnPlane x="512" y="512" z="2210" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="sphere">
+            <origin x="220" y="390" z="250" />
+            <radius r="90" />
+            <material type="glass" />
+        </object>
+        <object type="sphere">
+            <origin x="595" y="25" z="640" />
+            <radius r="25" />
+            <material type="measured" name="Scenes/BRDFs/krylon_blue.astm" />
+        </object>
+        <object type="sphere">
+            <origin x="645" y="60" z="450" />
+            <radius r="60" />
+            <material type="matteOrenNayar" spectrum="orange" degree="55"/>
+        </object>
+        <object type="sphere">
+            <origin x="490" y="110" z="250" />
+            <radius r="110" />
+            <material type="plastic" spectrumDiffuse="cyan" spectrumSpecular="white" roughness="40" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="120" y="0" z="350" />
+            <vertex x="320" y="0" z="350" />
+            <vertex x="320" y="300" z="350" />
+            <vertex x="120" y="300" z="350" />
+            <pointOnPlane x="120" y="300" z="350" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="320" y="0" z="350" />
+            <vertex x="320" y="0" z="150" />
+            <vertex x="320" y="300" z="150" />
+            <vertex x="320" y="300" z="350" />
+            <pointOnPlane x="320" y="300" z="350" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="120" y="300" z="350" />
+            <vertex x="320" y="300" z="350" />
+            <vertex x="320" y="300" z="150" />
+            <vertex x="120" y="300" z="150" />
+            <pointOnPlane x="120" y="300" z="150" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="120" y="0" z="350" />
+            <vertex x="120" y="0" z="150" />
+            <vertex x="120" y="300" z="150" />
+            <vertex x="120" y="300" z="350" />
+            <pointOnPlane x="120" y="300" z="350" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="120" y="0" z="150" />
+            <vertex x="320" y="0" z="150" />
+            <vertex x="320" y="300" z="150" />
+            <vertex x="120" y="300" z="150" />
+            <pointOnPlane x="120" y="300" z="350" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+    </objects>
+</scene>

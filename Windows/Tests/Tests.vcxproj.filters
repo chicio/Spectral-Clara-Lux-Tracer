@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>5937ba8a-96bd-4ae6-a673-509c0f4c5706</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>818b3dbf-7367-4419-aaea-e73f311d9e58</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="SCLT">
+      <UniqueIdentifier>{e448f3ac-1b0e-4be0-af43-13bc33e4a2c2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="UnitTestApp.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UnitTestApp.xaml.cpp" />
+    <ClCompile Include="UnitTest.cpp" />
+    <ClCompile Include="..\..\SCLT\Lights\AreaLight.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\BRDF.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\BumpMapping\BumpMap.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Camera\Camera.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Color\ChromaticAdaptationTransform.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIELab.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIEUCS.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIEUVW.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIEXYZ.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Color\CRI\ColorRenderingIndex.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Skyboxes\CubeMappingSkybox.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDF.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Fresnel.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Lambertian.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\lodepng\lodepng.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble\MarbleTexture.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Material\Material.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Material\MaterialBRDF.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Material\MaterialRGB.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Math\Matrix.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Measured.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Model.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\OrenNayar.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Shading\PathBRDF.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Utils\PathReader.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Tracers\PathTracer.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinNoise\PerlinNoise.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\PerlinTexture.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Math\Point3D.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Polygon.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Math\RandomNumberGenerator.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Rays\Ray.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Scene\Scene.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Shading\ShadingModelFactory.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Shading\ShadingSpectrumModel.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Lights\ShadowCalculator.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Rays\ShadowRay.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularReflection.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularTransmission.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Sphere.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Math\SphericalCoordinate.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Square.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Utils\StringUtils.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\Texture.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\Scene\tinyxml2\tinyxml2.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\TorranceSparrow.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Tracers\Tracer.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Tracers\TracerModelFactory.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Tracers\TracerRGB.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Tracers\TracerSpectrum.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence\TurbulenceTexture.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Math\Vector3D.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Shading\Whitted.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Shading\WhittedBRDF.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\ObjParser\ObjParser.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\AxisAlignedBoundingBox.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SCLT\Objects\PolygonalMesh.cpp">
+      <Filter>SCLT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UnitTestApp.xaml.h" />
+    <ClInclude Include="..\..\SCLT\Lights\AreaLight.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\BRDF.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\BumpMapping\BumpMap.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Camera\Camera.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\ChromaticAdaptationTransform.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIELab.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIEUCS.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIEUVW.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIEXYZ.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\ColorMatchingFunction.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\CRI\ColorRenderingIndex.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Constants.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Skyboxes\CubeMappingSkybox.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDF.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDFModel.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Fresnel.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\Illuminant.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Intersection.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Lambertian.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Lights\Light.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\lodepng\lodepng.h">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\MacbethColorChecker.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble\MarbleTexture.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Material\Material.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Material\MaterialBRDF.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Material\MaterialRGB.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\MathUtils.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\Matrix.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Measured.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Model.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\OrenNayar.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\PathBRDF.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Utils\PathReader.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Tracers\PathTracer.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinNoise\PerlinNoise.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\PerlinTexture.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\Point3D.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Polygon.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\RandomNumberGenerator.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Rays\Ray.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Scene\Scene.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\ShadingModel.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\ShadingModelFactory.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\ShadingModelType.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\ShadingRGBModel.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\ShadingSpectrumModel.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Lights\ShadowCalculator.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Rays\ShadowRay.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Spectrum.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularReflection.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularTransmission.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Sphere.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\SphericalCoordinate.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Square.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\sRGB.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Utils\StringUtils.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Color\TestColorSamples.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\Texture.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\Scene\tinyxml2\tinyxml2.h">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\TorranceSparrow.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Tracers\Tracer.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Tracers\TracerModelFactory.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Tracers\TracerModelType.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Tracers\TracerRGB.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Tracers\TracerSpectrum.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence\TurbulenceTexture.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\Vector3D.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Camera\ViewPlane.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\Whitted.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\WhittedBRDF.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\ObjParser\ObjParser.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\AxisAlignedBoundingBox.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Objects\PolygonalMesh.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="UnitTestApp.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <Filter>SCLT</Filter>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tests_TemporaryKey.pfx">
+      <Filter>SCLT</Filter>
+    </None>
+  </ItemGroup>
+</Project>

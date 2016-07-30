@@ -1,0 +1,76 @@
+<!-- Spectral scene for path tracing with FL9 illuminant -->
+<scene type="Spectral">
+    <camera>
+        <viewReferencePoint x='512' y='500' z='2500' />
+        <lookAtPoint x='512' y='500' z='512' />
+        <viewPlane d='890' />
+    </camera>
+    <light type="area" brightness="30" spectrum="fl9">
+        <origin x='512' y='1514' z='512' />
+        <radius r='500' />
+    </light>
+    <tracerModelType numberOfSamples="5000">PathTracerModel</tracerModelType>
+    <shadingModelType>PathTracingBRDFShadingModel</shadingModelType>
+    <objects>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="0" z="2210" />
+            <vertex x="1024" y="0" z="2210" />
+            <vertex x="1024" y="0" z="0" />
+            <pointOnPlane x="512" y="0" z="512" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="0" y="0" z="2210" />
+            <pointOnPlane x="0" y="512" z="512" />
+            <material type="matteLambertian" spectrum="red" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="0" z="2210" />
+            <vertex x="1024" y="1024" z="2210" />
+            <vertex x="1024" y="1024" z="0" />
+            <pointOnPlane x="1024" y="512" z="512" />
+            <material type="matteLambertian" spectrum="green" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <pointOnPlane x="512" y="512" z="0" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="1024" z="2210" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="2210" />
+            <pointOnPlane x="512" y="1024" z="512" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="sphere">
+            <origin x='270' y='140' z='350' />
+            <radius r='140' />
+            <material type="plastic" spectrumDiffuse="black" spectrumSpecular="white" roughness="40" />
+        </object>
+        <object type="sphere">
+            <origin x="510" y="75" z="650" />
+            <radius r="75" />
+            <material type="matteOrenNayar" spectrum="magenta" degree="55"/>
+        </object>
+        <object type="sphere">
+            <origin x="820" y="130" z="700" />
+            <radius r="130" />
+            <material type="glass" />
+        </object>
+        <object type="sphere">
+            <origin x="390" y="45" z="830" />
+            <radius r="45" />
+            <material type="measured" name="Scenes/BRDFs/garnet_red.astm" />
+        </object>
+    </objects>
+</scene>

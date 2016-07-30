@@ -1,0 +1,136 @@
+<!-- RGB scene Cornell Box -->
+<scene type="RGB">
+	<camera>
+		<viewReferencePoint x="512" y="100" z="1023" />
+		<lookAtPoint x="512" y="100" z="512" />
+		<viewPlane d="250" />
+	</camera>
+    <light type="area">
+        <origin x="700" y="400" z="900" />
+        <radius r="60" />
+        <color r="255" g="255" b="255" />
+    </light>
+    <tracerModelType>TracerRGBModel</tracerModelType>
+    <shadingModelType>WhittedShadingModel</shadingModelType>
+    <empiricalLighting>BlinnPhong</empiricalLighting>
+    <objects>
+        <object type="square" skyboxSide="bottom">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="0" z="1024" />
+            <vertex x="1024" y="0" z="1024" />
+            <vertex x="1024" y="0" z="0" />
+            <pointOnPlane x="512" y="0" z="512" />
+            <material type="matteTextured" textureName="BottomIndoor" />
+        </object>
+        <object type="square" skyboxSide="left">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="0" y="1024" z="1024" />
+            <vertex x="0" y="0" z="1024" />
+            <pointOnPlane x="0" y="512" z="512" />
+            <material type="matteTextured" textureName="LeftIndoor" />
+        </object>
+        <object type="square" skyboxSide="right">
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="0" z="1024" />
+            <vertex x="1024" y="1024" z="1024" />
+            <vertex x="1024" y="1024" z="0" />
+            <pointOnPlane x="1024" y="512" z="512" />
+            <material type="matteTextured" textureName="RightIndoor" />
+        </object>
+        <object type="square" skyboxSide="back">
+            <vertex x="0" y="0" z="1024" />
+            <vertex x="0" y="1024" z="1024" />
+            <vertex x="1024" y="1024" z="1024" />
+            <vertex x="1024" y="0" z="1024" />
+            <pointOnPlane x="512" y="512" z="1024" />
+            <material type="matteTextured" textureName="BackIndoor" />
+        </object>
+        <object type="square" skyboxSide="front">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <pointOnPlane x="512" y="512" z="0" />
+            <material type="matteTextured" textureName="FrontIndoor" />
+        </object>
+        <object type="square" skyboxSide="top">
+            <vertex x="0" y="1024" z="1024" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="1024" />
+            <pointOnPlane x="512" y="1024" z="512" />
+            <material type="matteTextured" textureName="TopIndoor" />
+        </object>
+        <object type="sphere">
+            <origin x="750" y="35" z="620" />
+            <radius r="35" />
+            <material type="matteTextured" textureName="Rock" />
+        </object>
+        <object type="sphere">
+            <origin x="600" y="90" z="600" />
+            <radius r="90" />
+            <material type="flameMarble" />
+        </object>
+        <object type="sphere">
+            <origin x="150" y="280" z="450" />
+            <radius r="80" />
+            <material type="blueTurbulence" />
+        </object>
+        <object type="sphere">
+            <origin x="450" y="60" z="720" />
+            <radius r="60" />
+            <material type="chrome" />
+        </object>
+        <object type="sphere">
+            <origin x="490" y="30" z="840" />
+            <radius r="30" />
+            <material type="rubyBumpMapped" scale="6.0" />
+        </object>
+        <object type="sphere">
+            <origin x="200" y="30" z="630" />
+            <radius r="30" />
+            <material type="silver" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="50" y="0" z="550" />
+            <vertex x="250" y="0" z="550" />
+            <vertex x="250" y="200" z="550" />
+            <vertex x="50" y="200" z="550" />
+            <pointOnPlane x="120" y="100" z="550" />
+            <material type="bronze" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="250" y="0" z="550" />
+            <vertex x="250" y="0" z="350" />
+            <vertex x="250" y="200" z="350" />
+            <vertex x="250" y="200" z="550" />
+            <pointOnPlane x="250" y="100" z="450" />
+            <material type="bronze" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="50" y="200" z="550" />
+            <vertex x="250" y="200" z="550" />
+            <vertex x="250" y="200" z="350" />
+            <vertex x="50" y="200" z="350" />
+            <pointOnPlane x="250" y="200" z="450" />
+            <material type="bronze" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="50" y="0" z="550" />
+            <vertex x="50" y="0" z="350" />
+            <vertex x="50" y="200" z="350" />
+            <vertex x="50" y="200" z="550" />
+            <pointOnPlane x="50" y="100" z="450" />
+            <material type="bronze" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="50" y="0" z="350" />
+            <vertex x="250" y="0" z="350" />
+            <vertex x="250" y="200" z="350" />
+            <vertex x="50" y="200" z="350" />
+            <pointOnPlane x="120" y="100" z="350" />
+            <material type="bronze"/>
+        </object>
+    </objects>
+</scene>

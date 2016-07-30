@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9c04a295-ca93-49b6-a5d1-0f83e160a35a}</ProjectGuid>
+    <RootNamespace>SpectralClaraLuxTracer</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
+    <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <ProjectName>SCLT</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>SCLT_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>B40317798C554154A331756E55BD89FA13DCD17A</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir)Rasterizer;$(ProjectDir)..\..\SCLT;$(ProjectDir)..\..\SCLT\Camera;$(ProjectDir)..\..\SCLT\Color;$(ProjectDir)..\..\SCLT\Color\CRI;$(ProjectDir)..\..\SCLT\Color\CIEColorSpaces;$(ProjectDir)..\..\SCLT\Lights;$(ProjectDir)..\..\SCLT\Math;$(ProjectDir)..\..\SCLT\Objects;$(ProjectDir)..\..\SCLT\Objects\BRDF;$(ProjectDir)..\..\SCLT\Objects\Scene;$(ProjectDir)..\..\SCLT\Objects\Skyboxes;$(ProjectDir)..\..\SCLT\Rays;$(ProjectDir)..\..\SCLT\Shading;$(ProjectDir)..\..\SCLT\Textures\lodepng;$(ProjectDir)..\..SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures;$(ProjectDir)..\..\SCLT\Tracers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir)Rasterizer;$(ProjectDir)..\..\SCLT;$(ProjectDir)..\..\SCLT\Camera;$(ProjectDir)..\..\SCLT\Color;$(ProjectDir)..\..\SCLT\Color\CIEColorSpaces;$(ProjectDir)..\..\SCLT\Color\CRI;$(ProjectDir)..\..\SCLT\Lights;$(ProjectDir)..\..\SCLT\Math;$(ProjectDir)..\..\SCLT\Objects;$(ProjectDir)..\..\SCLT\Objects\BRDF\EmpiricalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF\PhysicalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF;$(ProjectDir)..\..\SCLT\Objects\Material;$(ProjectDir)..\..\SCLT\Objects\ObjParser;$(ProjectDir)..\..\SCLT\Objects\Scene;$(ProjectDir)..\..\SCLT\Objects\Scene\tinyxml2;$(ProjectDir)..\..\SCLT\Objects\Skyboxes;$(ProjectDir)..\..\SCLT\Rays;$(ProjectDir)..\..\SCLT\Shading;$(ProjectDir)..\..\SCLT\Textures;$(ProjectDir)..\..\SCLT\Textures\lodepng;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinNoise;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures;$(ProjectDir)..\..\SCLT\Tracers;$(ProjectDir)..\..\SCLT\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir)Rasterizer;$(ProjectDir)..\..\SCLT;$(ProjectDir)..\..\SCLT\Camera;$(ProjectDir)..\..\SCLT\Color;$(ProjectDir)..\..\SCLT\Color\CIEColorSpaces;$(ProjectDir)..\..\SCLT\Color\CRI;$(ProjectDir)..\..\SCLT\Lights;$(ProjectDir)..\..\SCLT\Math;$(ProjectDir)..\..\SCLT\Objects;$(ProjectDir)..\..\SCLT\Objects\BRDF\EmpiricalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF\PhysicalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF;$(ProjectDir)..\..\SCLT\Objects\Material;$(ProjectDir)..\..\SCLT\Objects\ObjParser;$(ProjectDir)..\..\SCLT\Objects\Skyboxes;$(ProjectDir)..\..\SCLT\Objects\Scene;$(ProjectDir)..\..\SCLT\Objects\Scene\tinyxml2;$(ProjectDir)..\..\SCLT\Rays;$(ProjectDir)..\..\SCLT\Shading;$(ProjectDir)..\..\SCLT\Textures;$(ProjectDir)..\..\SCLT\Textures\lodepng;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinNoise;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures;$(ProjectDir)..\..\SCLT\Tracers;$(ProjectDir)..\..\SCLT\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir)Rasterizer;$(ProjectDir)..\..\SCLT;$(ProjectDir)..\..\SCLT\Camera;$(ProjectDir)..\..\SCLT\Color;$(ProjectDir)..\..\SCLT\Color\CIEColorSpaces;$(ProjectDir)..\..\SCLT\Color\CRI;$(ProjectDir)..\..\SCLT\Lights;$(ProjectDir)..\..\SCLT\Math;$(ProjectDir)..\..\SCLT\Objects;$(ProjectDir)..\..\SCLT\Objects\BRDF\EmpiricalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF\PhysicalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF;$(ProjectDir)..\..\SCLT\Objects\Material;$(ProjectDir)..\..\SCLT\Objects\ObjParser;$(ProjectDir)..\..\SCLT\Objects\Scene;$(ProjectDir)..\..\SCLT\Objects\Scene\tinyxml2;$(ProjectDir)..\..\SCLT\Objects\Skyboxes;$(ProjectDir)..\..\SCLT\Rays;$(ProjectDir)..\..\SCLT\Shading;$(ProjectDir)..\..\SCLT\Textures;$(ProjectDir)..\..\SCLT\Textures\lodepng;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinNoise;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures;$(ProjectDir)..\..\SCLT\Tracers;$(ProjectDir)..\..\SCLT\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(ProjectDir)Rasterizer;$(ProjectDir)..\..\SCLT;$(ProjectDir)..\..\SCLT\Camera;$(ProjectDir)..\..\SCLT\Color;$(ProjectDir)..\..\SCLT\Color\CIEColorSpaces;$(ProjectDir)..\..\SCLT\Color\CRI;$(ProjectDir)..\..\SCLT\Lights;$(ProjectDir)..\..\SCLT\Math;$(ProjectDir)..\..\SCLT\Objects;$(ProjectDir)..\..\SCLT\Objects\BRDF\EmpiricalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF\PhysicalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF;$(ProjectDir)..\..\SCLT\Objects\Material;$(ProjectDir)..\..\SCLT\Objects\ObjParser;$(ProjectDir)..\..\SCLT\Objects\Scene;$(ProjectDir)..\..\SCLT\Objects\Scene\tinyxml2;$(ProjectDir)..\..\SCLT\Objects\Skyboxes;$(ProjectDir)..\..\SCLT\Rays;$(ProjectDir)..\..\SCLT\Shading;$(ProjectDir)..\..\SCLT\Textures;$(ProjectDir)..\..\SCLT\Textures\lodepng;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinNoise;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures;$(ProjectDir)..\..\SCLT\Tracers;$(ProjectDir)..\..\SCLT\Utils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SCLT\Camera\Camera.hpp" />
+    <ClInclude Include="..\..\SCLT\Camera\ViewPlane.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\ChromaticAdaptationTransform.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIELab.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIEUCS.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIEUVW.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\CIEColorSpaces\CIEXYZ.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\ColorMatchingFunction.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\CRI\ColorRenderingIndex.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\Illuminant.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\MacbethColorChecker.hpp" />
+    <ClInclude Include="..\..\SCLT\Color\TestColorSamples.hpp" />
+    <ClInclude Include="..\..\SCLT\Constants.hpp" />
+    <ClInclude Include="..\..\SCLT\Lights\AreaLight.hpp" />
+    <ClInclude Include="..\..\SCLT\Lights\Light.hpp" />
+    <ClInclude Include="..\..\SCLT\Lights\ShadowCalculator.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\Matrix.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\Point3D.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\RandomNumberGenerator.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\SphericalCoordinate.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\Utils.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\Vector3D.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\AxisAlignedBoundingBox.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDF.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDFModel.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\BRDF.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Lambertian.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Measured.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\OrenNayar.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularReflection.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularTransmission.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\BRDF\PhysicalModel\TorranceSparrow.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Fresnel.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Intersection.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Material\Material.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Material\MaterialBRDF.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Material\MaterialRGB.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Model.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\ObjParser\ObjParser.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Polygon.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\PolygonalMesh.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Scene\Scene.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Scene\tinyxml2\tinyxml2.h" />
+    <ClInclude Include="..\..\SCLT\Objects\Skyboxes\CubeMappingSkybox.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Sphere.hpp" />
+    <ClInclude Include="..\..\SCLT\Objects\Square.hpp" />
+    <ClInclude Include="..\..\SCLT\Rays\Ray.hpp" />
+    <ClInclude Include="..\..\SCLT\Rays\ShadowRay.hpp" />
+    <ClInclude Include="..\..\SCLT\SCLT.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\EmpiricalLightingModel.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\PathBRDF.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\ShadingModel.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\ShadingModelFactory.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\ShadingModelType.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\ShadingRGBModel.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\ShadingSpectrumModel.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\Whitted.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\WhittedBRDF.hpp" />
+    <ClInclude Include="..\..\SCLT\Spectrum.hpp" />
+    <ClInclude Include="..\..\SCLT\Textures\lodepng\lodepng.h" />
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\BumpMapping\BumpMap.hpp" />
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinNoise\PerlinNoise.hpp" />
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble\MarbleTexture.hpp" />
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\PerlinTexture.hpp" />
+    <ClInclude Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence\TurbulenceTexture.hpp" />
+    <ClInclude Include="..\..\SCLT\Textures\Texture.hpp" />
+    <ClInclude Include="..\..\SCLT\Tracers\PathTracer.hpp" />
+    <ClInclude Include="..\..\SCLT\Tracers\Tracer.hpp" />
+    <ClInclude Include="..\..\SCLT\Tracers\TracerModelFactory.hpp" />
+    <ClInclude Include="..\..\SCLT\Tracers\TracerModelType.hpp" />
+    <ClInclude Include="..\..\SCLT\Tracers\TracerRGB.hpp" />
+    <ClInclude Include="..\..\SCLT\Tracers\TracerSpectrum.hpp" />
+    <ClInclude Include="..\..\SCLT\Utils\PathReader.hpp" />
+    <ClInclude Include="..\..\SCLT\Utils\StringUtils.hpp" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="App.xaml.h">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="MainPage.xaml.h">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="Rasterizer\Rasterizer.h" />
+    <ClInclude Include="Support.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="..\..\LICENSE.md" />
+    <None Include="..\..\README.md" />
+    <Text Include="..\..\Scenes\BRDFs\acryl_blue.astm">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="..\..\Scenes\BRDFs\cayman.astm">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="..\..\Scenes\BRDFs\garnet_red.astm">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="..\..\Scenes\BRDFs\krylon_blue.astm">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <FileType>Document</FileType>
+    </Text>
+    <None Include="SCLT_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Scenes\Textures\Back.png" />
+    <Image Include="..\..\Scenes\Textures\BackIndoor.png" />
+    <Image Include="..\..\Scenes\Textures\Bottom.png" />
+    <Image Include="..\..\Scenes\Textures\BottomIndoor.png" />
+    <Image Include="..\..\Scenes\Textures\Flag.png" />
+    <Image Include="..\..\Scenes\Textures\Front.png" />
+    <Image Include="..\..\Scenes\Textures\FrontIndoor.png" />
+    <Image Include="..\..\Scenes\Textures\Left.png" />
+    <Image Include="..\..\Scenes\Textures\LeftIndoor.png" />
+    <Image Include="..\..\Scenes\Textures\Oldball.png" />
+    <Image Include="..\..\Scenes\Textures\Right.png" />
+    <Image Include="..\..\Scenes\Textures\RightIndoor.png" />
+    <Image Include="..\..\Scenes\Textures\Rock.png" />
+    <Image Include="..\..\Scenes\Textures\Top.png" />
+    <Image Include="..\..\Scenes\Textures\TopIndoor.png" />
+    <Image Include="Assets\ivl.png" />
+    <Image Include="Assets\logo-disco.png" />
+    <Image Include="Assets\SplashScreen.scale-150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-125.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-125.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-16.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-256.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-48.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square71x71Logo.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square71x71Logo.scale-125.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square71x71Logo.scale-150.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square71x71Logo.scale-200.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Square71x71Logo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\StoreLogo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-400.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SCLT\Camera\Camera.cpp" />
+    <ClCompile Include="..\..\SCLT\Color\ChromaticAdaptationTransform.cpp" />
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIELab.cpp" />
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIEUCS.cpp" />
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIEUVW.cpp" />
+    <ClCompile Include="..\..\SCLT\Color\CIEColorSpaces\CIEXYZ.cpp" />
+    <ClCompile Include="..\..\SCLT\Color\CRI\ColorRenderingIndex.cpp" />
+    <ClCompile Include="..\..\SCLT\Lights\AreaLight.cpp" />
+    <ClCompile Include="..\..\SCLT\Lights\ShadowCalculator.cpp" />
+    <ClCompile Include="..\..\SCLT\Math\Matrix.cpp" />
+    <ClCompile Include="..\..\SCLT\Math\Point3D.cpp" />
+    <ClCompile Include="..\..\SCLT\Math\RandomNumberGenerator.cpp" />
+    <ClCompile Include="..\..\SCLT\Math\SphericalCoordinate.cpp" />
+    <ClCompile Include="..\..\SCLT\Math\Vector3D.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\AxisAlignedBoundingBox.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDF.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\BRDF.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Lambertian.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\Measured.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\OrenNayar.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularReflection.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\SpecularTransmission.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\BRDF\PhysicalModel\TorranceSparrow.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Fresnel.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Material\Material.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Material\MaterialBRDF.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Material\MaterialRGB.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Model.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\ObjParser\ObjParser.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Polygon.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\PolygonalMesh.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Scene\Scene.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Scene\tinyxml2\tinyxml2.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Skyboxes\CubeMappingSkybox.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Sphere.cpp" />
+    <ClCompile Include="..\..\SCLT\Objects\Square.cpp" />
+    <ClCompile Include="..\..\SCLT\Rays\Ray.cpp" />
+    <ClCompile Include="..\..\SCLT\Rays\ShadowRay.cpp" />
+    <ClCompile Include="..\..\SCLT\SCLT.cpp" />
+    <ClCompile Include="..\..\SCLT\Shading\PathBRDF.cpp" />
+    <ClCompile Include="..\..\SCLT\Shading\ShadingModelFactory.cpp" />
+    <ClCompile Include="..\..\SCLT\Shading\ShadingSpectrumModel.cpp" />
+    <ClCompile Include="..\..\SCLT\Shading\Whitted.cpp" />
+    <ClCompile Include="..\..\SCLT\Shading\WhittedBRDF.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\lodepng\lodepng.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\BumpMapping\BumpMap.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinNoise\PerlinNoise.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble\MarbleTexture.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\PerlinTexture.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence\TurbulenceTexture.cpp" />
+    <ClCompile Include="..\..\SCLT\Textures\Texture.cpp" />
+    <ClCompile Include="..\..\SCLT\Tracers\PathTracer.cpp" />
+    <ClCompile Include="..\..\SCLT\Tracers\Tracer.cpp" />
+    <ClCompile Include="..\..\SCLT\Tracers\TracerModelFactory.cpp" />
+    <ClCompile Include="..\..\SCLT\Tracers\TracerRGB.cpp" />
+    <ClCompile Include="..\..\SCLT\Tracers\TracerSpectrum.cpp" />
+    <ClCompile Include="..\..\SCLT\Utils\PathReader.cpp" />
+    <ClCompile Include="..\..\SCLT\Utils\StringUtils.cpp" />
+    <ClCompile Include="App.xaml.cpp">
+      <DependentUpon>App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="MainPage.xaml.cpp">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Rasterizer\Rasterizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Scenes\0.xml" />
+    <Xml Include="..\..\Scenes\1.xml" />
+    <Xml Include="..\..\Scenes\10.xml" />
+    <Xml Include="..\..\Scenes\11.xml" />
+    <Xml Include="..\..\Scenes\12.xml" />
+    <Xml Include="..\..\Scenes\2.xml" />
+    <Xml Include="..\..\Scenes\3.xml" />
+    <Xml Include="..\..\Scenes\4.xml" />
+    <Xml Include="..\..\Scenes\5.xml" />
+    <Xml Include="..\..\Scenes\6.xml" />
+    <Xml Include="..\..\Scenes\7.xml" />
+    <Xml Include="..\..\Scenes\8.xml" />
+    <Xml Include="..\..\Scenes\9.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\Scenes\OBJs\Bunny.obj">
+      <FileType>Document</FileType>
+    </Xml>
+    <Xml Include="..\..\Scenes\OBJs\Cube.obj">
+      <FileType>Document</FileType>
+    </Xml>
+    <Xml Include="..\..\Scenes\OBJs\Dragon.obj">
+      <FileType>Document</FileType>
+    </Xml>
+    <Xml Include="..\..\Scenes\OBJs\Suzanne.obj">
+      <FileType>Document</FileType>
+    </Xml>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

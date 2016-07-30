@@ -1,0 +1,85 @@
+<!-- Path tracing with glass caustic scene -->
+<scene type="Spectral">
+	<camera>
+		<viewReferencePoint x="512" y="250" z="1023" />
+		<lookAtPoint x="512" y="250" z="512" />
+		<viewPlane d="410" />
+	</camera>
+    <light type="area" brightness="55" spectrum="d65">
+    <!-- <light type="area" brightness="20" spectrum="fl4"> -->
+        <origin x="500" y="650" z="-990" />
+        <radius r="1000" />
+    </light>
+    <tracerModelType numberOfSamples="500">PathTracerModel</tracerModelType>
+    <shadingModelType>PathTracingBRDFShadingModel</shadingModelType>
+    <objects>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="0" z="1024" />
+            <vertex x="1024" y="0" z="1024" />
+            <vertex x="1024" y="0" z="0" />
+            <pointOnPlane x="512" y="0" z="512" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="0" y="1024" z="1024" />
+            <vertex x="0" y="0" z="1024" />
+            <pointOnPlane x="0" y="512" z="512" />
+            <material type="matteLambertian" spectrum="red" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="0" z="1024" />
+            <vertex x="1024" y="1024" z="1024" />
+            <vertex x="1024" y="1024" z="0" />
+            <pointOnPlane x="1024" y="512" z="512" />
+            <material type="matteLambertian" spectrum="green" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="0" />
+            <vertex x="1024" y="0" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="0" y="1024" z="0" />
+            <pointOnPlane x="512" y="512" z="0" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="1024" z="1024" />
+            <vertex x="0" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="0" />
+            <vertex x="1024" y="1024" z="1024" />
+            <pointOnPlane x="512" y="1024" z="512" />
+            <material type="matteLambertian" spectrum="neutral8" />
+        </object>
+        <object type="polygonalshape">
+            <vertex x="0" y="0" z="1024" />
+            <vertex x="0" y="1024" z="1024" />
+            <vertex x="1024" y="1024" z="1024" />
+            <vertex x="1024" y="0" z="1024" />
+            <pointOnPlane x="512" y="512" z="1024" />
+            <material type="matteLambertian" spectrum="white" />
+        </object>
+        <object type="sphere">
+            <origin x="760" y="100" z="280" />
+            <radius r="100" />
+            <material type="matteOrenNayar" spectrum="orange" degree="50"/>
+        </object>
+        <object type="sphere">
+            <origin x="540" y="90" z="450" />
+            <radius r="90" />
+            <material type="glass" />
+        </object>
+        <object type="sphere">
+            <origin x="313" y="70" z="350" />
+            <radius r="70" />
+            <material type="glass"  />
+        </object>
+        <object type="sphere">
+            <origin x="200" y="90" z="150" />
+            <radius r="90" />
+            <material type="matteLambertian" spectrum="purplishBlue" />
+        </object>
+    </objects>
+</scene>
