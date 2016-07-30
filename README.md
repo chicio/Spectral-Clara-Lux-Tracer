@@ -5,13 +5,12 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/chicio/Spectral-Clara-Lux-Tracer/master/LICENSE.md)
 ![Supported platform] (https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20Windows%20%7C%20Linux-orange.svg)
 
-Physically based ray tracer with multiple shading models support and CRI evaluation develop for my master degree thesis at <a href="https://www.disco.unimib.it">University Milano-Bicocca</a> - <a href="http://www.ivl.disco.unimib.it">Imaging and Vision Laboratory</a>.
+Physically based ray tracer with multiple shading models support and CRI evaluation develop for my master degree thesis (<a href="https://drive.google.com/open?id=0BxeVnHLvT8-7dkxQRjV6M29TeUk">download link</a>) at <a href="https://www.disco.unimib.it">University Milano-Bicocca</a> - <a href="http://www.ivl.disco.unimib.it">Imaging and Vision Laboratory</a>.
 
 <p align="center">
 <img width="350" height="350" src="https://github.com/chicio/Spectral-Clara-Lux-Tracer/blob/master/Images/Readme/logo.jpg"
 </p>
 
-<a href="https://drive.google.com/open?id=0BxeVnHLvT8-7dkxQRjV6M29TeUk">Link to my thesis</a>.
 ***
 ###Introduction
 
