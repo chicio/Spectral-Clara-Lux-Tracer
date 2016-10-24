@@ -15,8 +15,8 @@ OrenNayar::OrenNayar(Spectrum<constant::spectrumSamples> reflectanceSpectrum,
     float sigma = MathUtils::degreeToRadian(degree);
     float sigmaPowerTwo = sigma * sigma;
     
-    A = 1.0f - (sigmaPowerTwo / 2.0f * (sigmaPowerTwo + 0.33f));
-    B = 0.45f * sigmaPowerTwo / (sigmaPowerTwo + 0.09f);
+    A = 1.0f - (sigmaPowerTwo / (2.0f * (sigmaPowerTwo + 0.33f)));
+    B = (0.45f * sigmaPowerTwo) / (sigmaPowerTwo + 0.09f);
     
     reflectanceSpectrumWeightWithPi = reflectanceSpectrum / constant::pi;
 };
