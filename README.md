@@ -37,7 +37,7 @@ As a consequence of using spectral power distribution for light and objects in a
 ***
 ###Overview
 
-Spectrum Clara Lux Tracer (SCLT) is new multi-platform physically based ray tracing rendering engine. It has been created to explore some of the possibilities of PBR and colorimetry in computer graphics rendering.
+Spectral Clara Lux Tracer (SCLT) is new multi-platform physically based ray tracing rendering engine. It has been created to explore some of the possibilities of PBR and colorimetry in computer graphics rendering.
 The main features of SCLT are:
 
 - ability to render scenes using PBR and empirical lighting models. In this way it is possible to compare physically base scenes with standard empirical light scenes.  In particular, for PBR, SCLT implements the following models: Lambertian, Oren-Nayar [5], Torrance-Sparrow [6], specular reflection, specular transmission and measured BRDF [7]. These models are derived from their implementation in PBRT [8].
