@@ -23,7 +23,7 @@ The base of all global illumination algorithms is the rendering equation, descri
 
 PBR lighting models are a physically correct representation of the first term inside the integral, called Bidirectional Reflectance Distribution Function (Pharr et al., 2010 [2]).
 Another interesting field of study strictly correlated to PBR is colorimetry. In particular, as a consequence of the fact that light is a subset of the entire electromagnetic spectrum, color in rendering can be computed using spectral distribution data, the tristimulus values and the correlated CIE XYZ color space (Kang, 2007 [3]). This color space was created by the main authority on color and illumination: International Commission on Illumination (CIE).
-The formulas that defines the tristimulus values are (Kang, 2007 [3]):
+The formulas that define the tristimulus values are (Kang, 2007 [3]):
 
 ![tristimulus x](https://raw.githubusercontent.com/chicio/Spectral-Clara-Lux-Tracer/master/Images/Readme/tristimulus-x.png)
 
