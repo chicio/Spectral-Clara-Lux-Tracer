@@ -3,16 +3,16 @@
 [![Build Status](https://travis-ci.org/chicio/Spectral-Clara-Lux-Tracer.svg?branch=master&aa)](https://travis-ci.org/chicio/Spectral-Clara-Lux-Tracer)
 [![Build status](https://ci.appveyor.com/api/projects/status/5ngd4y0qx5n8ygnm?svg=true)](https://ci.appveyor.com/project/chicio/spectral-clara-lux-tracer)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/chicio/Spectral-Clara-Lux-Tracer/master/LICENSE.md)
-![Supported platform] (https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20Windows%20%7C%20Linux-orange.svg)
+[![Supported platform](https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20Windows%20%7C%20Linux-orange.svg)](https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20Windows%20%7C%20Linux-orange.svg)
 
 Physically based ray tracer with multiple shading models support and CRI evaluation developed for my master degree thesis (<a href="https://drive.google.com/open?id=0BxeVnHLvT8-7dkxQRjV6M29TeUk" target="_blank">download link</a>) at <a href="https://www.disco.unimib.it">University Milano-Bicocca</a> - <a href="http://www.ivl.disco.unimib.it">Imaging and Vision Laboratory</a>.
 
 <p align="center">
-<img width="350" height="350" src="https://github.com/chicio/Spectral-Clara-Lux-Tracer/blob/master/Images/Readme/logo.jpg"
+<img width="350" height="350" src="https://github.com/chicio/Spectral-Clara-Lux-Tracer/blob/master/Images/Readme/logo.jpg"/>
 </p>
 
 ***
-###Introduction
+### Introduction
 
 Physically Based Rendering (PBR) aims at treating light the way it works in the real world, using physically correct lighting models and materials to achieve a new level of realism in rendering. 
 PBR is extensively used with different rendering techniques. In particular, it is often used in conjunction with ray tracing. 
@@ -35,7 +35,7 @@ In this way it is possible to render scenes with high color fidelity, that could
 As a consequence of using spectral power distribution for light and objects in a scene, it is possible also to evaluate how a light source accurately render all frequency of its color spectrum in comparison with an ideal/natural light source using the Color Rendering Index [4]. The lower the CRI, the less accurately colors will be reproduced.
 
 ***
-###Overview
+### Overview
 
 Spectral Clara Lux Tracer (SCLT) is a new multi-platform physically based ray tracing rendering engine. It has been created to explore some of the possibilities of PBR and colorimetry in computer graphics rendering.
 The main features of SCLT are:
@@ -57,7 +57,7 @@ The main features of SCLT are:
 The ability to render PBR scenes using spectral data, and the CRI calculation support, let SCLT be a perfect tool for industrial light design and production. In fact, with SCLT light designer could test the ability of new light product to reveal color, giving a numerical precise quantification with CRI. The support to multiple devices and operating system gives to the user the freedom to choose the preferred platform without any restriction.
 
 ***
-###Usage
+### Usage
 
 SCLT could run on:
 
@@ -70,7 +70,7 @@ For Microsoft Windows, it is possible to create a build using Visual Studio 2015
 For Linux command line application, the CMake version required is 2.8.
 
 ***
-###Scenes
+### Scenes
 
 **Scene 1**
 - Ray tracing technique: Whitted 
@@ -204,7 +204,7 @@ For Linux command line application, the CMake version required is 2.8.
 
 ***
 
-###References
+### References
 
 [1]  J. T. Kajiya, "The Rendering Equation," in SIGGRAPH '86, Dallas, 1986, pp. 143-150.
 
@@ -227,5 +227,4 @@ For Linux command line application, the CMake version required is 2.8.
 [10] CIE Commission Internationale de l'Eclairage, "Method of Measuring and Specifying Colour Rendering Properties of Light Sources," CIE Commission Internationale de l'Eclairage, CIE, Vienna, 1995.
 
 [11] P. Bodrogi, "Colour rendering: past, present(2004), and future," in CIE Symposium '04 on "LED Light Sources: Physical Measurement and Visual and Photobiological Assessment, Tokyo, 2010, pp. 10-12.
-
 
