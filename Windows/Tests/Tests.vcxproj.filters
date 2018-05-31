@@ -273,9 +273,6 @@
     <ClInclude Include="..\..\SCLT\Objects\Material\MaterialRGB.hpp">
       <Filter>SCLT</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SCLT\Math\MathUtils.hpp">
-      <Filter>SCLT</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\SCLT\Math\Matrix.hpp">
       <Filter>SCLT</Filter>
     </ClInclude>
@@ -360,9 +357,6 @@
     <ClInclude Include="..\..\SCLT\Objects\Square.hpp">
       <Filter>SCLT</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\SCLT\Color\sRGB.hpp">
-      <Filter>SCLT</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\SCLT\Utils\StringUtils.hpp">
       <Filter>SCLT</Filter>
     </ClInclude>
@@ -415,6 +409,15 @@
       <Filter>SCLT</Filter>
     </ClInclude>
     <ClInclude Include="..\..\SCLT\Objects\PolygonalMesh.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Math\Utils.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\SCLT.hpp">
+      <Filter>SCLT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SCLT\Shading\EmpiricalLightingModel.hpp">
       <Filter>SCLT</Filter>
     </ClInclude>
   </ItemGroup>
