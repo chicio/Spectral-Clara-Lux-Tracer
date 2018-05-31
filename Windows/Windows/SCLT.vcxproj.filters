@@ -719,19 +719,9 @@
     <Xml Include="..\..\Scenes\12.xml">
       <Filter>Scenes</Filter>
     </Xml>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="..\..\Scenes\OBJs\Bunny.obj">
-      <Filter>Scenes\OBJs</Filter>
-    </Object>
-    <Object Include="..\..\Scenes\OBJs\Cube.obj">
-      <Filter>Scenes\OBJs</Filter>
-    </Object>
-    <Object Include="..\..\Scenes\OBJs\Dragon.obj">
-      <Filter>Scenes\OBJs</Filter>
-    </Object>
-    <Object Include="..\..\Scenes\OBJs\Suzanne.obj">
-      <Filter>Scenes\OBJs</Filter>
-    </Object>
+    <Xml Include="..\..\Scenes\OBJs\Bunny.obj" />
+    <Xml Include="..\..\Scenes\OBJs\Cube.obj" />
+    <Xml Include="..\..\Scenes\OBJs\Dragon.obj" />
+    <Xml Include="..\..\Scenes\OBJs\Suzanne.obj" />
   </ItemGroup>
 </Project>

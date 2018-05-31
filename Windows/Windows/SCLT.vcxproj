@@ -100,7 +100,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>SCLT_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>B40317798C554154A331756E55BD89FA13DCD17A</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>27051537F108F1AB8686A654A81A06053D678066</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
