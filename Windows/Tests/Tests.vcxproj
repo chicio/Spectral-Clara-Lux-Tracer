@@ -7,7 +7,7 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">14.0</UnitTestPlatformVersion>
@@ -99,12 +99,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>Tests_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>59A4BF3889C926FCFFABD427236CA4410C604D5D</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
-      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include\UWP;$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include\UWP;$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories);$(ProjectDir)Rasterizer;$(ProjectDir)..\..\SCLT\;$(ProjectDir)..\..\SCLT\Utils;$(ProjectDir)..\..\SCLT\Camera;$(ProjectDir)..\..\SCLT\Textures;$(ProjectDir)..\..\SCLT\Color;$(ProjectDir)..\..\SCLT\Color\CRI;$(ProjectDir)..\..\SCLT\Color\CIEColorSpaces;$(ProjectDir)..\..\SCLT\Lights;$(ProjectDir)..\..\SCLT\Math;$(ProjectDir)..\..\SCLT\Objects;$(ProjectDir)..\..\SCLT\Objects\ObjParser;$(ProjectDir)..\..\SCLT\Objects\Material;$(ProjectDir)..\..\SCLT\Objects\BRDF;$(ProjectDir)..\..\SCLT\Objects\BRDF\EmpiricalModel;$(ProjectDir)..\..\SCLT\Objects\BRDF\PhysicalModel;$(ProjectDir)..\..\SCLT\Objects\Scene\tinyxml2;$(ProjectDir)..\..\SCLT\Objects\Scene;$(ProjectDir)..\..\SCLT\Objects\Skyboxes;$(ProjectDir)..\..\SCLT\Rays;$(ProjectDir)..\..\SCLT\Shading;$(ProjectDir)..\..\SCLT\Textures\lodepng;$(ProjectDir)..\..SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Marble;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinNoise;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\PerlinTextures\Turbulence;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures\BumpMapping;$(ProjectDir)..\..\SCLT\Textures\ProceduralTextures;$(ProjectDir)..\..\SCLT\Tracers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib\UWP;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -176,17 +177,16 @@
     <ClInclude Include="..\..\SCLT\Color\CRI\ColorRenderingIndex.hpp" />
     <ClInclude Include="..\..\SCLT\Color\Illuminant.hpp" />
     <ClInclude Include="..\..\SCLT\Color\MacbethColorChecker.hpp" />
-    <ClInclude Include="..\..\SCLT\Color\sRGB.hpp" />
     <ClInclude Include="..\..\SCLT\Color\TestColorSamples.hpp" />
     <ClInclude Include="..\..\SCLT\Constants.hpp" />
     <ClInclude Include="..\..\SCLT\Lights\AreaLight.hpp" />
     <ClInclude Include="..\..\SCLT\Lights\Light.hpp" />
     <ClInclude Include="..\..\SCLT\Lights\ShadowCalculator.hpp" />
-    <ClInclude Include="..\..\SCLT\Math\MathUtils.hpp" />
     <ClInclude Include="..\..\SCLT\Math\Matrix.hpp" />
     <ClInclude Include="..\..\SCLT\Math\Point3D.hpp" />
     <ClInclude Include="..\..\SCLT\Math\RandomNumberGenerator.hpp" />
     <ClInclude Include="..\..\SCLT\Math\SphericalCoordinate.hpp" />
+    <ClInclude Include="..\..\SCLT\Math\Utils.hpp" />
     <ClInclude Include="..\..\SCLT\Math\Vector3D.hpp" />
     <ClInclude Include="..\..\SCLT\Objects\AxisAlignedBoundingBox.hpp" />
     <ClInclude Include="..\..\SCLT\Objects\BRDF\EmpiricalModel\EmpiricalBRDF.hpp" />
@@ -214,6 +214,8 @@
     <ClInclude Include="..\..\SCLT\Objects\Square.hpp" />
     <ClInclude Include="..\..\SCLT\Rays\Ray.hpp" />
     <ClInclude Include="..\..\SCLT\Rays\ShadowRay.hpp" />
+    <ClInclude Include="..\..\SCLT\SCLT.hpp" />
+    <ClInclude Include="..\..\SCLT\Shading\EmpiricalLightingModel.hpp" />
     <ClInclude Include="..\..\SCLT\Shading\PathBRDF.hpp" />
     <ClInclude Include="..\..\SCLT\Shading\ShadingModel.hpp" />
     <ClInclude Include="..\..\SCLT\Shading\ShadingModelFactory.hpp" />
