@@ -1,7 +1,5 @@
 # SCLT: Spectral Clara Lux Tracer
 
-[![Build Status](https://travis-ci.org/chicio/Spectral-Clara-Lux-Tracer.svg?branch=master&aa)](https://travis-ci.org/chicio/Spectral-Clara-Lux-Tracer)
-[![Build status](https://ci.appveyor.com/api/projects/status/5ngd4y0qx5n8ygnm?svg=true)](https://ci.appveyor.com/project/chicio/spectral-clara-lux-tracer)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/chicio/Spectral-Clara-Lux-Tracer/master/LICENSE.md)
 [![Supported platform](https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20Windows%20%7C%20Linux-orange.svg)](https://img.shields.io/badge/platforms-iOS%20%7C%20OS%20X%20%7C%20Windows%20%7C%20Linux-orange.svg)
 
